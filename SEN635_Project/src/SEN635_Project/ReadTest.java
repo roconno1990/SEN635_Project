@@ -4,15 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LogoutTest {
+public class ReadTest {
 	private WebDriver driver;
 
-	LogoutTest( WebDriver driverIn ) {
+	ReadTest( WebDriver driverIn ) {
 		driver = driverIn;
 	}
 
 	public void runTest() {
 		
-		driver.findElement(By.xpath("//*[@aria-controls='ybarAccountMenuBody']")).click();
+		driver.findElement(By.xpath("//*[@data-test-id='message-list-item']")).click();
 	}
 }

@@ -32,6 +32,10 @@ public class SEN635_Project {
 			inboxTest.runTest();
 			Thread.sleep(5000);
 
+			ReadTest read = new ReadTest(driver);
+			read.runTest();
+			Thread.sleep(5000);
+
 			DraftTest draftTest = new DraftTest(driver);
 			draftTest.runTest();
 			Thread.sleep(5000);
@@ -55,6 +59,42 @@ public class SEN635_Project {
 			LessMoreTest lessMoreTest = new LessMoreTest(driver);
 			lessMoreTest.runTest();
 			Thread.sleep(5000);
+
+			PhotoTest photoTest = new PhotoTest(driver);
+			photoTest.runTest();
+			Thread.sleep(5000);
+
+			DocumentsTest docTest = new DocumentsTest(driver);
+			docTest.runTest();
+			Thread.sleep(5000);
+
+			TravelTest travelTest = new TravelTest(driver);
+			travelTest.runTest();
+			Thread.sleep(5000);
+
+			TutorialTest tutTest = new TutorialTest(driver);
+			tutTest.runTest();
+			Thread.sleep(5000);
+
+			ComposeTest compTest = new ComposeTest(driver);
+			compTest.runTest();
+			Thread.sleep(10000);
+
+			// Second tests to see if sent shows in inbox and sent folders
+			sentTest.runTest();
+			Thread.sleep(5000);
+			inboxTest.runTest();
+			Thread.sleep(5000);
+			read.runTest();
+			Thread.sleep(5000);
+
+			ReplyTest reply = new ReplyTest(driver);
+			reply.runTest();
+			Thread.sleep(5000);
+
+			//LogoutTest logoutTest = new LogoutTest(driver);
+			//logoutTest.runTest();
+			//Thread.sleep(5000);
 		} catch (InterruptedException e)
 		{
 			// TODO Auto-generated catch block
