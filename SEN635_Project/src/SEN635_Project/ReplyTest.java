@@ -24,7 +24,5 @@ public class ReplyTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		
 	}
 }

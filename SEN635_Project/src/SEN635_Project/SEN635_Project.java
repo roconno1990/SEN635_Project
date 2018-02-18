@@ -92,6 +92,14 @@ public class SEN635_Project {
 			reply.runTest();
 			Thread.sleep(5000);
 
+			DeleteMessage delete = new DeleteMessage(driver);
+			delete.runTest();
+			Thread.sleep(5000);
+
+			NewFolder newFolder = new NewFolder(driver);
+			newFolder.runTest();
+			Thread.sleep(5000);
+
 			//LogoutTest logoutTest = new LogoutTest(driver);
 			//logoutTest.runTest();
 			//Thread.sleep(5000);
