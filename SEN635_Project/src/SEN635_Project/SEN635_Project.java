@@ -2,13 +2,17 @@ package SEN635_Project;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class SEN635_Project {
 	
 	public static void main(String[] args) {
 		String exePath = "/home/ryan/eclipse-workspace/SEN635_Project/bin/chromedriver";
 		System.setProperty("webdriver.chrome.driver", exePath);
-		WebDriver driver = new ChromeDriver();
+
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--start-maximized");
+		WebDriver driver = new ChromeDriver(options);
 
 		try
 		{
@@ -72,6 +76,10 @@ public class SEN635_Project {
 			travelTest.runTest();
 			Thread.sleep(5000);
 
+			CouponTest coupon = new CouponTest(driver);
+			coupon.runTest();
+			Thread.sleep(5000);
+			
 			TutorialTest tutTest = new TutorialTest(driver);
 			tutTest.runTest();
 			Thread.sleep(5000);
@@ -98,6 +106,14 @@ public class SEN635_Project {
 
 			NewFolder newFolder = new NewFolder(driver);
 			newFolder.runTest();
+			Thread.sleep(5000);
+
+			RenameFolder rename = new RenameFolder(driver);
+			rename.runTest();
+			Thread.sleep(5000);
+			
+			DeleteFolder deleteFolder = new DeleteFolder(driver);
+			deleteFolder.runTest();
 			Thread.sleep(5000);
 
 			//LogoutTest logoutTest = new LogoutTest(driver);

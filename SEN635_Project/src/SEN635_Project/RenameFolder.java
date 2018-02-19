@@ -14,6 +14,8 @@ public class RenameFolder {
 	public void runTest() {
 		
 		try {
+			driver.findElement(By.xpath("//*[@data-test-folder-name='Test Folder']")).click();
+			Thread.sleep(1000);
 			driver.findElement(By.xpath("//*[@data-test-id='folder-menu-hook']")).click();
 			Thread.sleep(1000);
 
@@ -22,6 +24,9 @@ public class RenameFolder {
 
 			WebElement message = driver.findElement(By.xpath("//*[@aria-label='Enter folder name [Press enter to rename folder]']"));
 			message.sendKeys("Test Folder Renamed");
+			Thread.sleep(1000);
+
+			driver.findElement(By.xpath("//*[@data-test-id='icon-btn-enter']")).click();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

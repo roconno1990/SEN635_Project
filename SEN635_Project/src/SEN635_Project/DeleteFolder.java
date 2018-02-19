@@ -13,6 +13,8 @@ public class DeleteFolder {
 	public void runTest() {
 		
 		try {
+			driver.findElement(By.xpath("//*[@data-test-folder-name='Test Folder RenamedTest Folder']")).click();
+			Thread.sleep(1000);
 			driver.findElement(By.xpath("//*[@data-test-id='folder-menu-hook']")).click();
 			Thread.sleep(1000);
 
